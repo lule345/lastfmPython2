@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "PIP_lastfm-python_lule345"
+version = "1.0.9"
+authors = [
+{ name = "Malingen", email="admin@malingen.xyz" },
+]
+description = "A small Last.Fm search client written in python able to executed in terminal; Functions as a way for me to practice Python as beginner"
+readme = "README.md"
+requires-python = ">=3.13.0"
+classifiers = [
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.13",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+dependencies = [
+    "climage",
+    "kdtree",
+]
+[project.urls]
+Github = "https://github.com/lule345/lastfm-python/tree/main"
+Website = "https://malingen.xyz/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+lastfmPython = "lastfmPythonPkg.lastfm:lastfmPython"
