@@ -1,0 +1,2 @@
+[console_scripts]
+lastfmPython = lastfmPythonPkg.lastfm:lastfmPython

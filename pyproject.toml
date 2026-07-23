@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 [project]
 name = "PIP_lastfm-python_lule345"
-version = "1.0.9"
+version = "1.0.12"
 authors = [
 { name = "Malingen", email="admin@malingen.xyz" },
 ]
