@@ -32,22 +32,21 @@ def lastfmPython():
 
     file_name = "config.json"
 
-   
-    with open(file_name, "w") as file:
-        if os.path.exists(file_name) == False:
-            print("Please setup your API key in the config file! It has been created in your local directory.")
+    if os.path.exists(file_name) == False:
+        with open(file_name, "w") as file:
+            print("No config file found! Please setup your API key in the config file! It has been created in your local directory.")
             file.write('{"api_key": ""}') 
             sys.exit() 
-    if os.path.exists(file_name) == True:
+    else:
         try: 
             with open(file_name, "r") as file:
                 confJsonLoad = file.read()
                 keyJson = json.loads(confJsonLoad)
                 key = keyJson['api_key']
         except json.decoder.JSONDecodeError:
-            print("Please setup your API key in the config file! It can be found in your local directory.")
+            print("No key found! Please setup your API key in the config file! It can be found in your local directory. Once you believe you are done, run lastfmPython -h")
 
-    elif args.user:
+    if args.user:
         user = args.user # get user prompt
         lastfmServer = http.client.HTTPSConnection("ws.audioscrobbler.com") 
         lastfmServer.request("GET", "/2.0/?method=user.getInfo&user=" + user + "&api_key=" + key + "&format=json")

@@ -1,6 +1,19 @@
 # lastfm-python
 A small Last.Fm search client written in python able to executed in terminal; Functions as a way for me to practice Python as beginner
 
+Due to my previous git repo, https://github.com/lule345/lastfm-python/, somehow getting bugged by VS code not handling git correctly, I had to remake the repo and so this is why this is here. You can still find the original repo with the link before.
+
+Demonstration video can be found at: https://youtu.be/qNmmetEVYJQ
+
+Usage:
+1. ``pipx install PIP-lastfm-python-lule345``
+2. ``lastfmPython``
+3. Configure the local ``config.json`` file to include API key (see: https://www.last.fm/api/account/create; you will require a last.fm account)
+4. The JSON file will look like: ``{"api_key": "YOUR_API_KEY_HERE"}``; Upon getting your API key from last.fm, insert your key in the field there, save, and continue to step 5.
+5. ``lastfmPython --h``
+
+Options/Features:
+
 ```
 options:
   -h, --help                                show this help message and exit
@@ -15,8 +28,9 @@ options:
   -v, --verbose                             prints API key, HTTP info
 ```
 
+
 - Supply your own Last.Fm API Key (see: https://www.last.fm/api/account/create)
 - Licensed under GNU General Public License v3
-- Available at PIP: https://pypi.org/project/PIP-lastfm-python-lule345/1.0.0/
+- Available at PIP: https://pypi.org/project/PIP-lastfm-python-lule345/
 
 ![screenshot demo of lastfm.py](/screenshot1.png)
