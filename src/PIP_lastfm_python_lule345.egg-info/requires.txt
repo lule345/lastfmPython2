@@ -1,2 +1,0 @@
-climage
-kdtree

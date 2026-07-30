@@ -330,5 +330,3 @@ def lastfmPython():
             print(f'{artistIndex + 1}. {lastfmJson["artists"]["artist"][artistIndex]["name"]}')
             print(f"   Playcount: {lastfmJson["artists"]["artist"][artistIndex]["playcount"]}")
             print(f"   Link: {lastfmJson["artists"]["artist"][artistIndex]["url"]}")
-
-lastfmPython()
